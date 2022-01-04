@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Housing Predict</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <form id="form1">
+      <table>
+        <tr>
+          <td><label for="OverallQual">Độ hoàn thiện nhà (thang 10)</label></td>
+          <td><input 
+            id="OverallQual"
+            type="number"
+            placeholder="9"
+            min=0
+            max=10
+            required
+          /></td>
+        </tr>
+        <tr>
+          <td><label for="GrLivArea">Mã code khu vực sống (tạm điền như placeholder)</label></td>
+          <td><input
+            id="GrLivArea"
+            type="number"
+            placeholder="2324"
+            required
+          /></td>
+        </tr>
+        <tr>
+          <td><label for="GarageCars">Số Garage để ô tô</label></td>
+          <td><input
+            id="GarageCars"
+            type="number"
+            placeholder="1"
+            required
+          /></td>
+        </tr>
+        <tr>
+          <td><label for="TotalBsmtSF">TotalBsmtSF. I dont know what it exactly means</label></td>
+          <td><input 
+            id="TotalBsmtSF",
+            placeholder="1"
+            type="number"
+            required
+          /></td>
+        </tr>
+        <tr>
+          <td><label for="FullBath">Số lượng phòng tắm</label></td>
+          <td><input 
+            id="FullBath"
+            type="number"
+            placeholder="1"
+            required
+          /></td>
+        </tr>
+        <tr>
+          <td><label for="YearBuilt">Năm xây dựng</label></td>
+          <td><input 
+            id="YearBuilt"
+            type="number"
+            placeholder="2003"
+            required
+          /></td>
+        </tr>
+      </table>
+    </form>
+    <button type="submit" form="form1" value="Predict">Predict</button>
+
+    <div id="qual-cont" />
+    <div id="liv-area-cont" />
+    <div id="year-cont" />
+    <div id="year-price-cont" />
+    <div id="qual-price-cont" />
+    <div id="livarea-price-cont" />
+    <div id="loss-cont"></div>
+    <div id="acc-cont"></div>
+    <div id="slm-predictions-cont"></div>
+    <div id="lm-predictions-cont"></div>
+    <h1 id='last-price'/>
+    <script src="src/index.js"></script>
+  </body>
+</html>
